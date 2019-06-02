@@ -15,6 +15,8 @@
     <maven.compiler.source>${javaVersion}</maven.compiler.source>
     <maven.compiler.target>${javaVersion}</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <acf.version>${acfVersion}</acf.version>
+    <guice.version>${guiceVersion}</guice.version>
   </properties>
 
   <repositories>
@@ -22,6 +24,11 @@
     <repository>
       <id>spigot-repo</id>
       <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+    </repository>
+    <!-- Aikar -->
+    <repository>
+      <id>aikar</id>
+      <url>https://repo.aikar.co/content/groups/aikar/</url>
     </repository>
   </repositories>
 
@@ -33,6 +40,27 @@
       <version>${spigotVersion}</version>
       <scope>provided</scope>
     </dependency>
+
+    <!-- Annotation Command Framework -->
+    <dependency>
+      <groupId>co.aikar</groupId>
+      <artifactId>acf-bukkit</artifactId>
+      <version>${acf.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.google.inject.extensions</groupId>
+      <artifactId>guice-assistedinject</artifactId>
+      <version>${guice.version}</version>
+    </dependency>
+
+    <!-- Google Guice -->
+    <dependency>
+      <groupId>com.google.inject</groupId>
+      <artifactId>guice</artifactId>
+      <version>${guice.version}</version>
+    </dependency>
+
     <!-- Lombok -->
     <dependency>
       <groupId>org.projectlombok</groupId>
@@ -97,8 +125,40 @@
             <link>https://hub.spigotmc.org/javadocs/spigot/</link>
           </links>
           <!-- Use delomboked sources to include generated methods as well -->
-          <sourcepath>${basedir}/target/generated-sources/delombok</sourcepath>
+          <sourcepath>${project.build.directory}/delombok</sourcepath>
         </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.2.1</version>
+        <configuration>
+          <relocations>
+            <relocation>
+              <pattern>co.aikar.commands</pattern>
+              <shadedPattern>net.frostbyte.acf</shadedPattern>
+            </relocation>
+          </relocations>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <filters>
+                <filter>
+                  <artifact>*:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/*.SF</exclude>
+                    <exclude>META-INF/*.DSA</exclude>
+                    <exclude>META-INF/*.RSA</exclude>
+                  </excludes>
+                </filter>
+              </filters>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
       <!-- lombok-maven-plugin -->
       <plugin>
@@ -117,6 +177,9 @@
         </executions>
         <configuration>
           <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
+          <outputDirectory>${project.build.directory}/delombok</outputDirectory>
+          <addOutputDirectory>false</addOutputDirectory>
+          <encoding>UTF-8</encoding>
         </configuration>
       </plugin>
     </plugins>

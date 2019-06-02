@@ -5,17 +5,19 @@ Maven archetype for creating Spigot plugins.
 To use the archetype locally, clone it and install it to your local repository using the following commands in an empty directory. After that, you may add it to your local catalog.
 
 ````
-git clone https://github.com/SkeletonEye/spigot-archetype.git .
+git clone https://github.com/frost-byte/spigot-archetype.git .
 mvn install
 ````
 
 After doing that once, you can generate a new project using:
 
 ````
-mvn archetype:generate -DarchetypeArtifactId=spigot-archetype -DarchetypeGroupId=de.skeletoneye.maven -DarchetypeVersion=0.1.0-SNAPSHOT
+mvn archetype:generate -DarchetypeArtifactId=spigot-archetype -DarchetypeGroupId=net.frost-byte.maven -DarchetypeVersion=0.1.0-SNAPSHOT
 ````
 
-You can **test** the archetype by running `test.sh`. A sample project will be set up in `test/testplugin`.
+You can **test** the archetype by running `test.sh` on Linux or
+`test.bat` on Windows. A sample project will be set up in
+`test/testplugin`.
 
 ## Contents
 

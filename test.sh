@@ -4,13 +4,13 @@ rm -rf test
 mkdir test
 cd test
 mvn archetype:generate -DarchetypeArtifactId=spigot-archetype    \
-                       -DarchetypeGroupId=de.skeletoneye.maven   \
+                       -DarchetypeGroupId=net.frost-byte.maven   \
                        -DarchetypeVersion=0.1.0-SNAPSHOT         \
                        -DartifactId=testplugin                   \
-                       -DgroupId=de.skeletoneye.test             \
+                       -DgroupId=net.frost-byte.test             \
                        -DjavaVersion=1.8                         \
                        -DmainClass=TestMain                      \
-                       -DpluginAuthor=SkeletonEye                \
+                       -DpluginAuthor=frost-byte                 \
                        -DpluginDescription='Little test plugin'  \
                        -DpluginName=MyTestPlugin                 \
                        -DpluginWebsite=https://www.spigotmc.org  \

@@ -1,48 +1,66 @@
-<archetype-descriptor xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                      xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
-                      name="spigot-archetype">
-  <requiredProperties>
-    <requiredProperty key="mainClass">
-      <defaultValue>MyPlugin</defaultValue>
-    </requiredProperty>
-    <requiredProperty key="pluginName" />
-    <requiredProperty key="pluginAuthor" />
-    <requiredProperty key="pluginDescription" />
-    <requiredProperty key="pluginWebsite">
-      <defaultValue>https://www.spigotmc.org</defaultValue>
-    </requiredProperty>
-    <requiredProperty key="spigotVersion">
-      <defaultValue>1.8.8-R0.1-SNAPSHOT</defaultValue>
-    </requiredProperty>
-    <requiredProperty key="javaVersion">
-      <defaultValue>1.8</defaultValue>
-    </requiredProperty>
-  </requiredProperties>
+<archetype-descriptor
+        xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0
+            http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+        name="spigot-archetype">
+    <requiredProperties>
+        <requiredProperty key="mainClass">
+            <defaultValue>MyPlugin</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="pluginName"/>
+        <requiredProperty key="pluginAuthor"/>
+        <requiredProperty key="pluginDescription"/>
+        <requiredProperty key="pluginWebsite">
+            <defaultValue>https://www.spigotmc.org</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="commandPermission">
+            <defaultValue>myplugin.admin</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="commandAlias">
+            <defaultValue>myplugin</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="apiVersion">
+            <defaultValue>1.14</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="acfVersion">
+            <defaultValue>0.5.0-SNAPSHOT</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="guiceVersion">
+            <defaultValue>4.2.0</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="spigotVersion">
+            <defaultValue>1.14.2-R0.1-SNAPSHOT</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="javaVersion">
+            <defaultValue>1.8</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
 
-  <fileSets>
-    <fileSet encoding="UTF-8" filtered="true" packaged="true">
-      <directory>src/main/java</directory>
-      <includes>
-        <include>**/*</include>
-      </includes>
-    </fileSet>
-    <fileSet encoding="UTF-8" filtered="true">
-      <directory>src/main/javadoc</directory>
-      <includes>
-        <include>**/*.html</include>
-      </includes>
-    </fileSet>
-    <fileSet encoding="UTF-8" filtered="true" packaged="true">
-      <directory>src/main/javadoc</directory>
-      <includes>
-        <include>**/*.java</include>
-      </includes>
-    </fileSet>
-    <fileSet encoding="UTF-8" filtered="true">
-      <directory>src/main/resources</directory>
-      <includes>
-        <include>**/*</include>
-      </includes>
-    </fileSet>
-  </fileSets>
+    <fileSets>
+        <fileSet encoding="UTF-8" filtered="true" packaged="true">
+            <directory>src/main/java</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8" filtered="true">
+            <directory>src/main/javadoc</directory>
+            <includes>
+                <include>**/*.html</include>
+            </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8" filtered="true" packaged="true">
+            <directory>src/main/javadoc</directory>
+            <includes>
+                <include>**/*.java</include>
+            </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8" filtered="true">
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+    </fileSets>
 </archetype-descriptor>

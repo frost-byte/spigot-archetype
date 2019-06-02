@@ -2,28 +2,28 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>de.skeletoneye.maven</groupId>
+  <groupId>net.frost-byte.maven</groupId>
   <artifactId>spigot-archetype</artifactId>
   <version>0.1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>Archetype for Spigot plugins</name>
   <description>Archetype for Spigot plugins</description>
-  <url>https://www.github.com/SkeletonEye/SpigotArchetype</url>
+  <url>https://www.github.com/frost-byte/SpigotArchetype</url>
 
   <developers>
     <developer>
-      <id>SkeletonEye</id>
-      <name>SkeletonEye</name>
-      <email>skeletoneye@outlook.com</email>
-      <url>https://www.github.com/SkeletonEye</url>
+      <id>frost-byte</id>
+      <name>frost-byte</name>
+      <email>brian@frost-byte.net</email>
+      <url>https://www.github.com/frost-byte</url>
     </developer>
   </developers>
 
   <licenses>
     <license>
       <name>MIT License</name>
-      <url>https://www.github.com/SkeletonEye/spigot-archetype/blob/master/LICENSE</url>
+      <url>https://www.github.com/frost-byte/spigot-archetype/blob/master/LICENSE</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
