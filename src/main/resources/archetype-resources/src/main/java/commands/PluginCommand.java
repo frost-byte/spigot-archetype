@@ -10,21 +10,20 @@ import com.google.inject.name.Named;
 import ${package}.${mainPlugin};
 import org.bukkit.World;
 import org.bukkit.command.CommandSender;
-
+import lombok.AllArgsConstructor;
 import java.util.logging.Logger;
 
 @SuppressWarnings("unused")
 @Singleton
 @CommandAlias("${commandAlias}")
 @CommandPermission("${commandPermission}")
+@AllArgsConstructor(onConstructor = @__({@Inject}))
 public class PluginCommand extends BaseCommand
 {
-    @Inject
-    private ${mainClass} plugin;
+    private final ${mainClass} plugin;
 
-    @Inject
     @Named("${mainClass}Logger")
-    private Logger logger;
+    private final Logger logger;
 
     @Subcommand("reload")
     @Description("Reload the plugin's configuration.")

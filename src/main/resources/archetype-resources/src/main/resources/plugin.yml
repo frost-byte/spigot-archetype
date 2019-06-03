@@ -5,4 +5,4 @@ website: ${project.url}
 author: ${pluginAuthor}
 version: ${project.version}
 api-version: ${apiVersion}
-main: ${package}.${mainClass}
+main: ${groupId}.${artifactId}.${mainClass}

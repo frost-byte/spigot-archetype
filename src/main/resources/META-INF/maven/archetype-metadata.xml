@@ -14,11 +14,11 @@
         <requiredProperty key="pluginWebsite">
             <defaultValue>https://www.spigotmc.org</defaultValue>
         </requiredProperty>
-        <requiredProperty key="commandPermission">
-            <defaultValue>myplugin.admin</defaultValue>
-        </requiredProperty>
         <requiredProperty key="commandAlias">
             <defaultValue>myplugin</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="commandPermission">
+            <defaultValue>${commandAlias}.admin</defaultValue>
         </requiredProperty>
         <requiredProperty key="apiVersion">
             <defaultValue>1.14</defaultValue>
@@ -54,6 +54,12 @@
             <directory>src/main/javadoc</directory>
             <includes>
                 <include>**/*.html</include>
+            </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8" filtered="true">
+            <directory>./</directory>
+            <includes>
+                <include>**/*.config</include>
             </includes>
         </fileSet>
         <fileSet encoding="UTF-8" filtered="true" packaged="true">
