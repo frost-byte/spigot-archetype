@@ -17,6 +17,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <acf.version>${acfVersion}</acf.version>
         <guice.version>${guiceVersion}</guice.version>
+        <lombok.version>${lombokVersion}</lombok.version>
     </properties>
 
     <repositories>
@@ -65,7 +66,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.20</version>
+            <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -166,7 +167,7 @@
             <plugin>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok-maven-plugin</artifactId>
-                <version>1.16.20.0</version>
+                <version>${lombokPluginVersion}</version>
                 <executions>
                     <execution>
                         <id>delombok</id>
