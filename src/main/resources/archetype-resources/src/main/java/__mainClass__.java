@@ -24,6 +24,8 @@ public class ${mainClass} extends JavaPlugin implements Listener
 	 */
 	private Injector injector;
 
+	private boolean isActive;
+
 	/**
 	 * ACF CommandManager for Bukkit used for
 	 * registering in game and console commands, contexts,

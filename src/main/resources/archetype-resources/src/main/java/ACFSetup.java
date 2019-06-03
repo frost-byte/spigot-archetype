@@ -1,5 +1,5 @@
 #set( $symbol_dollar = '$' )
-	package ${package};
+package ${package};
 
 import co.aikar.commands.*;
 import com.google.inject.Inject;
@@ -17,13 +17,13 @@ class ACFSetup
 	private final Logger logger;
 
 	@SuppressWarnings( { "FieldCanBeLocal", "unused" })
-	private final Main plugin;
+	private final ${mainClass} plugin;
 
 	@Inject
 	public ACFSetup(
 		BukkitCommandManager commandManager,
 		@Named("${mainClass}Logger") Logger logger,
-		Main plugin
+		${mainClass} plugin
 	) {
 		this.commandManager = commandManager;
 		this.logger = logger;
@@ -95,3 +95,4 @@ class ACFSetup
 		logger.info("Registering " + command.getName() + " command...");
 		commandManager.registerCommand(command);
 	}
+}
