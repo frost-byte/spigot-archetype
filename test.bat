@@ -28,6 +28,7 @@ CALL mvn -X archetype:generate ^
   "-DpluginDescription=%DESC%"                ^
   "-DpluginName=%NAME%"                       ^
   "-DcommandAlias=%COMMAND%"                  ^
+  "-DcommandPermission=%COMMAND%.admin"       ^
   "-DpluginWebsite=https://www.spigotmc.org"  ^
   "-DspigotVersion=1.14.2-R0.1-SNAPSHOT"      ^
   "-Dversion=0.0.1-SNAPSHOT"
