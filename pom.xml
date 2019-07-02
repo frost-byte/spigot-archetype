@@ -31,4 +31,17 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  <distributionManagement>
+    <downloadUrl>https://frost-byte.net/nexus/repository/maven-public/</downloadUrl>
+    <snapshotRepository>
+      <id>nexus</id>
+      <name>frost-byte Snapshots</name>
+      <url>https://frost-byte.net/nexus/repository/maven-snapshots/</url>
+    </snapshotRepository>
+    <repository>
+      <id>nexus</id>
+      <name>frost-byte Releases</name>
+      <url>https://frost-byte.net/nexus/repository/maven-releases/</url>
+    </repository>
+  </distributionManagement>
 </project>
